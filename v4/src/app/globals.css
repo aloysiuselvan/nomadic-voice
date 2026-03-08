@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1bac9e;
+  --color-gold-accent: #c5a059;
+  --color-background-light: #f6f7f7;
+  --color-background-dark: #12201f;
+  --color-charcoal-deep: #0d1615;
+  
+  --font-display: "Inter", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Base styles that were in @layer base */
+body {
+  background-color: var(--color-background-dark);
+  font-family: var(--font-display);
+  color: #f1f5f9; /* text-slate-100 */
+}
+
+/* Selection styles */
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Component styles that were in @layer components */
+.glass-card {
+  background: rgba(27, 172, 158, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(27, 172, 158, 0.1);
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(27, 172, 158, 0.4);
+}
+
+.grain-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+.teal-glow-border {
+  box-shadow: 0 0 20px rgba(27, 172, 158, 0.2);
+}

@@ -1,0 +1,19 @@
+{
+  "name": "nomadic-voice-workspace",
+  "version": "1.0.0",
+  "description": "Gateway orchestration for nomadic-voice sub-projects",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix v1\" \"npm run dev --prefix v2\" \"npm run dev --prefix v3\" \"npm run dev --prefix v4\" \"npm run dev --prefix gateway\"",
+    "install-all": "npm install"
+  },
+  "workspaces": [
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "gateway"
+  ],
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

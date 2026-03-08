@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* ── Custom Design Tokens (Tailwind v4 @theme) ── */
+@theme inline {
+  --color-primary: #1bac9e;
+  --color-secondary: #a7d7c5;
+  --color-accent: #d4af37;
+  --color-background-light: #f8fafa;
+  --color-background-dark: #12201f;
+
+  --font-display: "Manrope", sans-serif;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.25rem;
+  --radius-full: 9999px;
+}
+
+/* ── Custom Utility Classes ── */
+.manuscript-bg {
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(212, 175, 55, 0.05) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+}
+
+.silk-wave {
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(167, 215, 197, 0.1) 50%,
+    transparent 70%
+  );
+}
+
+/* ── Base Styles ── */
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8fafa;
+  font-family: "Manrope", sans-serif;
+  color: #0f172a; /* slate-900 */
+}
+
+::selection {
+  background-color: rgb(27 172 158 / 0.3);
+}
+
+/* Material Symbols: prevent layout shift */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
