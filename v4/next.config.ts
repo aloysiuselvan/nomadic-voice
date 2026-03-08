@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/v4",
-  trailingSlash: true,
-
+  //basePath: "/v4",
   reactStrictMode: false,
   images: {
     remotePatterns: [

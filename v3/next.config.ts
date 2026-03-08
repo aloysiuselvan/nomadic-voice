@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/v3",
-  trailingSlash: true,
-
+  // basePath: "/v3",
   experimental: {
     optimizePackageImports: ["framer-motion"],
   },
